@@ -14,7 +14,63 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_13"
+               BlueprintIdentifier = "OBJ_44"
+               BuildableName = "CommandLineKit.framework"
+               BlueprintName = "CommandLineKit"
+               ReferencedContainer = "container:WheatFlower.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_53"
+               BuildableName = "Rainbow.framework"
+               BlueprintName = "Rainbow"
+               ReferencedContainer = "container:WheatFlower.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_70"
+               BuildableName = "Spectre.framework"
+               BlueprintName = "Spectre"
+               ReferencedContainer = "container:WheatFlower.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_84"
+               BuildableName = "PathKit.framework"
+               BlueprintName = "PathKit"
+               ReferencedContainer = "container:WheatFlower.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_93"
                BuildableName = "WheatFlower"
                BlueprintName = "WheatFlower"
                ReferencedContainer = "container:WheatFlower.xcodeproj">
@@ -45,9 +101,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "OBJ_13"
-            BuildableName = "WheatFlower"
-            BlueprintName = "WheatFlower"
+            BlueprintIdentifier = "OBJ_44"
+            BuildableName = "CommandLineKit.framework"
+            BlueprintName = "CommandLineKit"
             ReferencedContainer = "container:WheatFlower.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
