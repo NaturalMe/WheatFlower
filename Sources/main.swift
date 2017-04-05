@@ -17,17 +17,22 @@ let deleteGitOption = BoolOption(
     longFlag: "delete-git",
     helpMessage: "Delete .git directory")
 
+let replaceOption = StringOption(
+    shortFlag: "rp",
+    longFlag: "replace",
+    helpMessage: "Replace all file content you want")
 
 let renameOption = StringOption(
-    shortFlag: "r",
+    shortFlag: "rn",
     longFlag: "reanme",
-    helpMessage: "Rename all file name and content you want")
+    helpMessage: "Rename all file name you want")
 
 let helpOption = BoolOption(
     shortFlag: "h",
     longFlag: "help",
     helpMessage: "Prints a help message.")
 
+// TODO: Replace
 cli.addOptions(deleteGitOption, renameOption, helpOption)
 
 cli.formatOutput = { s, type in
@@ -58,33 +63,32 @@ if helpOption.value {
     exit(EX_OK)
 }
 
-let isDelete = deleteGitOption.value
-let newName = renameOption.value
 
 
 let wheatFlowerKit = WheatFlowerKit()
 let currentPath = Path.current.string
 
-print(currentPath.blue)
-
-if isDelete {
+if deleteGitOption.value {
     print("delete /.git....".yellow)
     wheatFlowerKit.deleteGit(path: currentPath)
     print("delete /.git success".green)
     exit(EX_OK)
 }
 
-if let newName = newName {
-    
-    /* 
-     TODO: 
-        1. 修改当前目录下全部文件及文件夹名称
-        2. 替换当前目录下全部文件的内容
-        3. 修改当前目录的上级文件夹名称
-     */
+
+if let relpace = replaceOption.value {
+    print("replace all file....".yellow)
+    wheatFlowerKit.oldName = Path.current.lastComponent
+    wheatFlowerKit.newName = relpace
+    wheatFlowerKit.replaceAll(path: currentPath)
+    print("replace all file success".green)
+    exit(EX_OK)
+}
+
+if let rename = renameOption.value {
     print("rename all file....".yellow)
     wheatFlowerKit.oldName = Path.current.lastComponent
-    wheatFlowerKit.newName = newName
+    wheatFlowerKit.newName = rename
     wheatFlowerKit.recursionRename(path: currentPath)
     print("rename all file success".green)
     exit(EX_OK)
